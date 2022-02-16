@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { sum, sub, mul, div} from 'bilals-simple-calculator';
 
 function printConsole(pCount){
    console.log("state work " + pCount)
 }
 
 function StudentList(props){
-   const [count, setCount] = useState(new Date().getSeconds());
+   const [count, setCount] = useState(0);
 
    return (
       <div>
@@ -14,7 +15,7 @@ function StudentList(props){
            return <li>{student.firstname} {student.lastname}</li>
          })}
          </ul>
-         <button onClick={() => {setCount(new Date().getSeconds())}}>Set Count</button>
+         <button onClick={() => {setCount(sum(count, 1))}}>Set Count</button>
          {printConsole(count)}
       </div>
    )
