@@ -1,5 +1,5 @@
 import './App.css';
-import list from './components/student';
+import list from './data/student';
 import StudentList from './components/StudentList';
 
 
